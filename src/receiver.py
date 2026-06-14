@@ -70,13 +70,12 @@ def start_receiver():
             write_log("CẢNH BÁO NGUY HIỂM: Chữ ký số không hợp lệ! Thực thể giả mạo."); conn.sendall(b"NACK\n"); return
         write_log("XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.")
 
-        # [TÍNH NĂNG NÂNG CẤP CỐT LÕI]: Kiểm tra chống tấn công Replay Attack
-        # Cấu trúc meta: tên_file|timestamp|loại_file
+        # Kiểm tra chống tấn công Replay Attack
         meta_parts = metadata_str.split('|')
         sent_time = float(meta_parts[1])
         current_time = time.time()
         
-        if current_time - sent_time > 60: # Nếu gói tin được ký cách đây quá 60 giây
+        if current_time - sent_time > 60:
             write_log("CẢNH BÁO AN NINH: Phát hiện gói tin nghi vấn REPLAY ATTACK! Từ chối xử lý.")
             conn.sendall(b"NACK_REPLAY\n"); return
         write_log("XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).")
@@ -107,10 +106,20 @@ def start_receiver():
             write_log("CẢNH BÁO BẢO MẬT: Thẻ xác thực Tag của hệ AES-GCM bị lỗi! Ciphertext đã bị sửa đổi.")
             conn.sendall(b"NACK_TAG\n"); return
 
-        # Ghi lưu file thành phẩm xuống phân vùng dữ liệu
+        # Ghi lưu file thành phẩm xuống ổ đĩa
         with open("received_finance.txt", "wb") as f:
             f.write(original_data)
-        write_log(f"THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản '{meta_parts[0]}'.")
+            
+        # [NÂNGCẤP 2026]: Đọc gói đặc tả hiệu năng để ghi vết chi tiết vào Log hệ thống
+        spec_meta = msg3.get("spec_meta", {})
+        write_log(f"--- THÔNG SỐ KIỂM TOAN HIỆU NĂNG NHÓM 4 ---")
+        write_log(f"File nhận thực tế: {meta_parts[0]}")
+        write_log(f"Kích thước gốc: {spec_meta.get('orig_size')} bytes")
+        write_log(f"Kích thước sau nén: {spec_meta.get('comp_size')} bytes")
+        write_log(f"Thuật toán nén sử dụng: {spec_meta.get('comp_algo')}")
+        write_log(f"Thời gian nén hệ thống: {spec_meta.get('comp_time_ms')} ms")
+        write_log(f"Thời gian mã hóa hệ thống: {spec_meta.get('enc_time_ms')} ms")
+        write_log(f"THÀNH CÔNG: Đã khôi phục tệp tin và hoàn tất kiểm toán an ninh.")
         conn.sendall(b"ACK\n")
 
     except Exception as e:

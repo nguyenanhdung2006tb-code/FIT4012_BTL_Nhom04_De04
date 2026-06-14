@@ -42,3 +42,72 @@
 [2026-06-14 13:24:24] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
 [2026-06-14 13:24:24] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
 [2026-06-14 13:24:24] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_large.txt'.
+[2026-06-14 13:46:35] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:46:47] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 52421)
+[2026-06-14 13:46:47] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:46:47] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:46:47] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:46:47] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:46:47] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:46:47] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_small.txt'.
+[2026-06-14 13:47:39] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:47:46] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 61589)
+[2026-06-14 13:47:46] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:47:46] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:47:46] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:47:46] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:47:46] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:47:46] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_medium.txt'.
+[2026-06-14 13:48:36] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:48:41] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 61597)
+[2026-06-14 13:48:41] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:48:41] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:48:41] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:48:41] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:48:41] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:48:41] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_large.txt'.
+[2026-06-14 13:56:16] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:56:26] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 62298)
+[2026-06-14 13:56:26] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:56:26] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:56:26] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:56:26] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:56:26] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:56:26] --- THÔNG SỐ KIỂM TOAN HIỆU NĂNG NHÓM 4 ---
+[2026-06-14 13:56:26] File nhận thực tế: financial_small.txt
+[2026-06-14 13:56:26] Kích thước gốc: 41500 bytes
+[2026-06-14 13:56:26] Kích thước sau nén: 239 bytes
+[2026-06-14 13:56:26] Thuật toán nén sử dụng: zlib
+[2026-06-14 13:56:26] Thời gian nén hệ thống: 1.2451 ms
+[2026-06-14 13:56:26] Thời gian mã hóa hệ thống: 7.2549 ms
+[2026-06-14 13:56:26] THÀNH CÔNG: Đã khôi phục tệp tin và hoàn tất kiểm toán an ninh.
+[2026-06-14 13:57:53] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:57:59] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 49940)
+[2026-06-14 13:57:59] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:57:59] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:57:59] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:57:59] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:57:59] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:57:59] --- THÔNG SỐ KIỂM TOAN HIỆU NĂNG NHÓM 4 ---
+[2026-06-14 13:57:59] File nhận thực tế: financial_medium.txt
+[2026-06-14 13:57:59] Kích thước gốc: 415000 bytes
+[2026-06-14 13:57:59] Kích thước sau nén: 1505 bytes
+[2026-06-14 13:57:59] Thuật toán nén sử dụng: zlib
+[2026-06-14 13:57:59] Thời gian nén hệ thống: 1.7953 ms
+[2026-06-14 13:57:59] Thời gian mã hóa hệ thống: 5.2567 ms
+[2026-06-14 13:57:59] THÀNH CÔNG: Đã khôi phục tệp tin và hoàn tất kiểm toán an ninh.
+[2026-06-14 13:58:38] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:58:46] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 49945)
+[2026-06-14 13:58:46] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:58:46] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:58:46] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:58:46] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:58:46] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:58:46] --- THÔNG SỐ KIỂM TOAN HIỆU NĂNG NHÓM 4 ---
+[2026-06-14 13:58:46] File nhận thực tế: financial_large.txt
+[2026-06-14 13:58:46] Kích thước gốc: 2075000 bytes
+[2026-06-14 13:58:46] Kích thước sau nén: 7135 bytes
+[2026-06-14 13:58:46] Thuật toán nén sử dụng: zlib
+[2026-06-14 13:58:46] Thời gian nén hệ thống: 9.7208 ms
+[2026-06-14 13:58:46] Thời gian mã hóa hệ thống: 4.7983 ms
+[2026-06-14 13:58:46] THÀNH CÔNG: Đã khôi phục tệp tin và hoàn tất kiểm toán an ninh.

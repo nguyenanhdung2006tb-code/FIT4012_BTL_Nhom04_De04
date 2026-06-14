@@ -60,13 +60,20 @@ def start_sender(file_path):
         client_socket.sendall(json.dumps(key_packet).encode('utf-8') + b'\n')
         print("[+] Bước 2: Đã gửi chữ ký số định danh hệ thống và khóa phiên mã hóa.")
 
-        # BƯỚC 3: MÃ HÓA & TRUYỀN DỮ LIỆU ĐÃ TỐI ƯU NÉN
-        # Kế thừa chức năng nền: Nén dữ liệu thô bằng zlib trước khi đưa vào vùng mã hóa
+        # BƯỚC 3: MÃ HÓA & TRUYỀN DỮ LIỆU ĐÃ TỐI ƯU NÉN (CÓ BẤM GIỜ THỰC TẾ)
+        # 1. Đo lường chính xác thời gian nén zlib bằng cao tần perf_counter
+        t_start_comp = time.perf_counter()
         compressed_data = zlib.compress(original_data)
+        t_end_comp = time.perf_counter()
+        comp_time_ms = round((t_end_comp - t_start_comp) * 1000, 4)
+        comp_size = len(compressed_data)
         
-        # Nâng cấp bảo mật: Mã hóa AES-GCM tự sinh nonce ngẫu nhiên
+        # 2. Đo lường chính xác thời gian mã hóa đối xứng AES-GCM
+        t_start_enc = time.perf_counter()
         cipher_aes = AES.new(session_key, AES.MODE_GCM)
         ciphertext, tag = cipher_aes.encrypt_and_digest(compressed_data)
+        t_end_enc = time.perf_counter()
+        enc_time_ms = round((t_end_enc - t_start_enc) * 1000, 4)
 
         # Đóng gói an toàn Base64 bảo vệ tính toàn vẹn của cấu trúc JSON Payload
         nonce_b64 = base64.b64encode(cipher_aes.nonce).decode('utf-8')
@@ -77,21 +84,36 @@ def start_sender(file_path):
         raw_payload = cipher_aes.nonce + ciphertext + tag
         hash_hex = SHA512.new(raw_payload).hexdigest()
 
-        # Đóng gói tệp tin gửi đi đúng định dạng mô tả trang 9 đề bài
+        # [ĐẶC TẢ NÂNG CẤP TRANG 9]: Khởi tạo gói metadata kỹ thuật để truyền đi
+        spec_metadata = {
+            "orig_size": orig_size,
+            "comp_size": comp_size,
+            "comp_algo": "zlib",
+            "comp_time_ms": comp_time_ms,
+            "enc_time_ms": enc_time_ms
+        }
+
+        # Đóng gói tệp tin gửi đi đúng định dạng mô tả đề bài
         data_packet = {
             "nonce": nonce_b64,
             "cipher": cipher_b64,
             "tag": tag_b64,
             "hash": hash_hex,
-            "sig": signature
+            "sig": signature,
+            "spec_meta": spec_metadata  # Gửi gói dữ liệu đo lường sang máy nhận
         }
         client_socket.sendall(json.dumps(data_packet).encode('utf-8') + b'\n')
         print("[+] Bước 3: Đã gửi gói dữ liệu tài chính tối ưu mã hóa Base64 thành công.")
 
-        # Bước 4: Nhận tín hiệu kết thúc giao thức
+        # Bước 4: Nhận tín hiệu kết thúc giao thức và in số liệu thật lên màn hình
         result = client_socket.recv(1024).decode('utf-8').strip()
         if result == "ACK":
-            print("[+] Bước 4: Máy nhận phản hồi ACK - Hệ thống hoàn thành truyền nhận an toàn đạt chuẩn 2026!")
+            print("[+] Bước 4: Máy nhận phản hồi ACK - Hoàn tất truyền nhận an toàn đạt chuẩn 2026!")
+            print(f"\n>> KET QUA DO DAC HIEU NANG HE THONG (BENCHMARK):")
+            print(f"   + Kích thước thô ban đầu: {orig_size} bytes")
+            print(f"   + Kích thước sau khi nén: {comp_size} bytes")
+            print(f"   + Tốc độ thuật toán nén: {comp_time_ms} ms")
+            print(f"   + Tốc độ mã hóa AES-GCM: {enc_time_ms} ms")
         else:
             print(f"[-] Thất bại: Máy nhận từ chối xử lý gói tin (Mã lỗi: {result})")
 
@@ -101,4 +123,4 @@ def start_sender(file_path):
         client_socket.close()
 
 if __name__ == "__main__":
-    start_sender("sample_data/financial_large.txt")
+  start_sender("sample_data/financial_large.txt")

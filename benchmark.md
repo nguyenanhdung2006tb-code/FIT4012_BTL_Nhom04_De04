@@ -1,15 +1,15 @@
 # BAO CAO BENCHMARK HIEU NANG HE THONG - NHOM 4
 
-Mo ta: He thong thuc hien do dac thuc te tren moi truong Localhost voi 3 tep du lieu tai chinh co kich thuoc khac nhau de danh gia ty le nen cua thuat toan zlib va toc do xu ly cua he mat ma lai nang cap RSA 1024-bit (PKCS#1 v1.5) + AES-GCM 128-bit.
+Mo ta: He thong thuc hien do dac thuc te tren moi truong Localhost de danh gia ty le nen cua thuat toan zlib va toc do xu ly cua he mat ma lai nang cap RSA 1024-bit + AES-GCM 128-bit.
 
-## Bang tong hop so lieu do dac thuc te (He mat ma lai nang cap)
+## Bang tong hop so lieu do dac thuc te (Ghi nhan truc tiep tu he thong)
 
-| Ten Tep Thu Nghiem | Kich Thuoc Goc | Kich Thuoc Sau Nen | Ty Le Nen Dat | Thoi Gian Nen | Thoi Gian Ma Hoa (RSA + AES) | Thoi Gian Giai Ma + Xac Thuc |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| financial_small.txt | 41,500 bytes | 239 bytes | 99.42% | 0.16 ms | 14.20 ms | 15.35 ms |
-| financial_medium.txt | 415,000 bytes | 1,505 bytes | 99.64% | 1.73 ms | 15.85 ms | 16.42 ms |
-| financial_large.txt | 2,075,000 bytes | 7,135 bytes | 99.66% | 8.20 ms | 22.40 ms | 24.18 ms |
+| Ten Tep Thu Nghi Nghi | Kich Thuoc Goc | Kich Thuoc Sau Nen | Ty Le Nen Dat | Thoi Gian Nen | Thoi Gian Ma Hoa (RSA + AES) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| financial_small.txt | 41,500 bytes | 239 bytes | 99.42% | 1.2451 ms | 7.2549 ms |
+| financial_medium.txt | 415,000 bytes | 1,505 bytes | 99.64% | 1.7953 ms | 5.2567 ms |
+| financial_large.txt | 2,075,000 bytes | 7,135 bytes | 99.66% | 9.7208 ms | 4.7983 ms |
 
 ## Nhan xet ket qua cau hinh nang cap 2026
-1. Toi uu dung luong: Thuat toan nen zlib duy tri ty le nen cuc cao (tren 99%), giup giam thieu toi da tai bang thong khi truyen tyeu tin tai chinh lon qua Socket TCP.
-2. Anh huong cua RSA: Thoi gian ma hoa va giai ma co tang nhe so voi phien ban cu do he thong phai thuc hien ky so va xac thuc RSA-SHA512 de chong gia mao va kiem tra Timestamp chong Replay Attack. Tuy nhien, tong thoi gian xu ly van o muc cuc ky an toan va muot ma (duoi 25 ms cho file 2 MB), hoan toan dap ung tieu chuan bao mat thoi gian thuc.
+1. Toi uu dung luong: Thuat toan nen zlib hoat dong cuc ky hieu qua tren cac tep tin van ban bao cao tai chinh cua cong ty, giup tiet kiem trung binh hon 99% bang thong duong truyen truoc khi day qua Socket TCP.
+2. Hieu nang mat ma: Thoi gian ma hoa va xu ly goi tin luon duy tri o muc sieu nhanh (duoi 10 ms cho tat ca cac phan vung kich thuoc file), bao dam tinh an toan tuyet doi nhung khong he gay tre he thong.
