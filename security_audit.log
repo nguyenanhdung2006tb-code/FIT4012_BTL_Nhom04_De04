@@ -34,3 +34,11 @@
 [2026-06-14 13:07:22] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
 [2026-06-14 13:07:22] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
 [2026-06-14 13:07:22] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_large.txt'.
+[2026-06-14 13:24:16] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:24:24] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 62056)
+[2026-06-14 13:24:24] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:24:24] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:24:24] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:24:24] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:24:24] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:24:24] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_large.txt'.
