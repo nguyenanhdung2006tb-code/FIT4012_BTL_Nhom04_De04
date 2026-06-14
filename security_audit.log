@@ -1,0 +1,36 @@
+[2026-06-14 12:18:24] MÁY NHẬN: Hệ thống khởi động thành công, đang đợi kết nối từ máy gửi...
+[2026-06-14 12:18:32] KẾT NỐI: Đã kết nối với thực thể tại địa chỉ IP: ('127.0.0.1', 53227)
+[2026-06-14 12:18:32] MẠNG: Đã nhận thành công gói tin JSON payload.
+[2026-06-14 12:18:32] MẬT MÃ: Tiến hành kiểm tra tính toàn vẹn (Tag) và giải mã dữ liệu...
+[2026-06-14 12:18:32] MẬT MÃ: Xác thực thành công! Thời gian giải mã: 6.55 ms
+[2026-06-14 12:18:32] HỆ THỐNG: Giải nén dữ liệu thành công.
+[2026-06-14 12:18:32] THÀNH CÔNG: File đã được khôi phục nguyên bản và lưu tại 'received_financial_report.txt'
+[2026-06-14 12:27:21] MÁY NHẬN: Hệ thống khởi động thành công, đang đợi kết nối từ máy gửi...
+[2026-06-14 12:27:32] KẾT NỐI: Đã kết nối với thực thể tại địa chỉ IP: ('127.0.0.1', 57392)
+[2026-06-14 12:27:32] MẠNG: Đã nhận thành công gói tin JSON payload.
+[2026-06-14 12:27:32] MẬT MÃ: Tiến hành kiểm tra tính toàn vẹn (Tag) và giải mã dữ liệu...
+[2026-06-14 12:27:32] MẬT MÃ: Xác thực thành công! Thời gian giải mã: 9.32 ms
+[2026-06-14 12:27:32] HỆ THỐNG: Giải nén dữ liệu thành công.
+[2026-06-14 12:27:32] THÀNH CÔNG: File đã được khôi phục nguyên bản và lưu tại 'received_financial_small.txt'
+[2026-06-14 12:28:37] MÁY NHẬN: Hệ thống khởi động thành công, đang đợi kết nối từ máy gửi...
+[2026-06-14 12:28:45] KẾT NỐI: Đã kết nối với thực thể tại địa chỉ IP: ('127.0.0.1', 53488)
+[2026-06-14 12:28:45] MẠNG: Đã nhận thành công gói tin JSON payload.
+[2026-06-14 12:28:45] MẬT MÃ: Tiến hành kiểm tra tính toàn vẹn (Tag) và giải mã dữ liệu...
+[2026-06-14 12:28:45] MẬT MÃ: Xác thực thành công! Thời gian giải mã: 8.76 ms
+[2026-06-14 12:28:45] HỆ THỐNG: Giải nén dữ liệu thành công.
+[2026-06-14 12:28:45] THÀNH CÔNG: File đã được khôi phục nguyên bản và lưu tại 'received_financial_medium.txt'
+[2026-06-14 12:30:08] MÁY NHẬN: Hệ thống khởi động thành công, đang đợi kết nối từ máy gửi...
+[2026-06-14 12:30:16] KẾT NỐI: Đã kết nối với thực thể tại địa chỉ IP: ('127.0.0.1', 53496)
+[2026-06-14 12:30:16] MẠNG: Đã nhận thành công gói tin JSON payload.
+[2026-06-14 12:30:16] MẬT MÃ: Tiến hành kiểm tra tính toàn vẹn (Tag) và giải mã dữ liệu...
+[2026-06-14 12:30:16] MẬT MÃ: Xác thực thành công! Thời gian giải mã: 8.69 ms
+[2026-06-14 12:30:16] HỆ THỐNG: Giải nén dữ liệu thành công.
+[2026-06-14 12:30:16] THÀNH CÔNG: File đã được khôi phục nguyên bản và lưu tại 'received_financial_large.txt'
+[2026-06-14 13:07:15] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-14 13:07:22] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 60225)
+[2026-06-14 13:07:22] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-14 13:07:22] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-14 13:07:22] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-14 13:07:22] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-14 13:07:22] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-14 13:07:22] THÀNH CÔNG: Đã khôi phục tệp tin gốc bảo mật nguyên bản 'financial_large.txt'.
