@@ -111,3 +111,17 @@
 [2026-06-14 13:58:46] Thời gian nén hệ thống: 9.7208 ms
 [2026-06-14 13:58:46] Thời gian mã hóa hệ thống: 4.7983 ms
 [2026-06-14 13:58:46] THÀNH CÔNG: Đã khôi phục tệp tin và hoàn tất kiểm toán an ninh.
+[2026-06-15 16:01:18] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-15 16:01:24] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 56394)
+[2026-06-15 16:01:24] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-15 16:01:24] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-15 16:01:24] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-15 16:01:24] XÁC THỰC: Kiểm tra mốc thời gian hợp lệ (Chống Replay đạt chuẩn).
+[2026-06-15 16:01:24] MẬT MÃ: Khóa phiên Session Key đã được giải mã an toàn.
+[2026-06-15 16:01:25] CẢNH BÁO BẢO MẬT: Thẻ xác thực Tag của hệ AES-GCM bị lỗi! Ciphertext đã bị sửa đổi.
+[2026-06-15 16:02:22] MÁY NHẬN: Hệ thống khởi động nâng cấp thành công, đang đợi kết nối...
+[2026-06-15 16:02:30] KẾT NỐI: Thực thể mạng kết nối tại địa chỉ: ('127.0.0.1', 56402)
+[2026-06-15 16:02:30] HANDSHAKE: Nhận tín hiệu 'Hello!'.
+[2026-06-15 16:02:30] HANDSHAKE: Đã phản hồi 'Ready!' kèm RSA Public Key.
+[2026-06-15 16:02:30] XÁC THỰC: Xác minh chữ ký số RSA-SHA512 thành công.
+[2026-06-15 16:02:30] CẢNH BÁO AN NINH: Phát hiện gói tin nghi vấn REPLAY ATTACK! Từ chối xử lý.
